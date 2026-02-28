@@ -314,7 +314,6 @@ select {
     background: rgba(0, 0, 0, 0.05);
 }
 
-/* Liste amis */
 .amis-list {
     display: flex;
     flex-direction: column;
@@ -378,4 +377,25 @@ select {
 
 .btn-message:hover {
     background: var(--hover-bg);
+}
+
+button {
+    margin-left: 20px;
+}
+
+.LREbutton {
+    background-color: #5B7C99;
+    color: white;
+    border-radius:30px;
+    padding: 8px 20px;
+    width: fit-content;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.LREbutton:hover {
+    background-color: #2B5F8C;
+    transform: scale(1.05);
 }

@@ -79,7 +79,7 @@ form a {
     margin: -5px;
 }
 
-form button {
+.Create {
     text-align: center;
     margin-top: 14px;
     background-color: #5B7C99;
@@ -88,22 +88,6 @@ form button {
     padding: 10px;
     color: white;
     cursor: pointer;
-}
-
-.angel:hover {
-    color: #4169E1;
-}
-
-.croissant:hover {
-
-}
-
-.miku:hover {
-
-}
-
-.fusée:hover {
-
 }
 
 @font-face {

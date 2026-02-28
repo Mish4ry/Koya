@@ -240,6 +240,10 @@ select {
     border-radius: 2px;
 }
 
+button {
+    margin-left: 20px;
+}
+
 .LREbutton {
     background-color: #5B7C99;
     color: white;
@@ -310,7 +314,7 @@ select {
     background: rgba(0, 0, 0, 0.05);
 }
 
-/* Liste amis */
+
 .amis-list {
     display: flex;
     flex-direction: column;
