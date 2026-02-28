@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - KOVA</title>
+    <link rel="stylesheet" href="../style/settings.css">
+</head>
+<body>
+    <main>
+        <aside class="sidebar left-sidebar">
+            <p class="logo">
+                <img src="../asset/image/logo-final.png" alt="">
+                KOYA
+            </p>
+            <nav>
+                <a href="../pages/feed.html">
+                    <img src="../asset/icon/feed (2).svg" alt="">
+                    <span>Feed</span>
+                </a>
+                <a href="#">
+                    <img src="../asset/icon/notif.svg" alt="">
+                    <span>Notification</span>
+                </a>
+                <a href="#">
+                    <img src="../asset/icon/friend.svg" alt="">
+                    <span>Amis</span>
+                </a>
+                <a href="#" class="active">
+                    <img src="../asset/icon/setting.svg" alt="">
+                    <span>Parametre</span>
+                </a>
+                <a href="../pages/profil.html" class="profil-pic">
+                    <img src="../asset/image/Misha-logo.jpeg" alt="profil-pic">
+                    <span>Profil</span>
+                </a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div class="page-header">
+                <h1 class="page-title">Paramètres</h1>
+                <p class="page-subtitle">Gérez vos préférences et paramètres de compte</p>
+            </div>
+
+            <section class="settings-section">
+                <h2 class="section-title">
+                    <span class="section-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M8 7a4 4 0 1 1 8 0a4 4 0 0 1-8 0m0 6a5 5 0 0 0-5 5a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3a5 5 0 0 0-5-5z" clip-rule="evenodd"/></svg>
+                    </span>
+                    Compte
+                </h2>
+
+                <div class="profile-pic-row">
+                    <div class="profile-pic">
+                        <img src="../asset/image/Misha-logo.jpeg" alt="">
+                    </div>
+                    <div>
+                        <div class="setting-name">Photo de profil</div>
+                        <div class="button-group">
+                            <button class="btn btn-secondary">Changer</button>
+                            <button class="btn btn-secondary">Supprimer</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-label">
+                        <div class="setting-name">Nom d'utilisateur</div>
+                        <div class="setting-desc">Visible par tous les membres</div>
+                    </div>
+                    <input type="text" class="text-input" value="Misha" placeholder="Nom d'utilisateur">
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-label">
+                        <div class="setting-name">Email</div>
+                        <div class="setting-desc">Pour les notifications importantes</div>
+                    </div>
+                    <input type="email" class="text-input" value="misha.linear@gmail.com" placeholder="Email">
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-label">
+                        <div class="setting-name">Équipe actuelle</div>
+                        <div class="setting-desc">Votre équipe principale</div>
+                    </div>
+                    <select class="select-input">
+                        <option value="">Rochefort</option>
+                        <option value="">Bruxelles</option>
+                        <option value="">Etterbeedk</option>
+                        <option value="">Ixelles</option>
+                        <option value="">Anderlecht</option>
+                        <option value="">Koekelberg</option>
+                        <option value="">Jette</option>
+                        <option value="">Evere</option>
+                        <option value="">Woluwé-St-Pierre</option>
+                        <option value="">Auderghem</option>
+                        <option value="">Watermael-Boitsfort</option>
+                        <option value="">Uccle</option>
+                        <option value="">Woluwé-St-Lambert</option>
+                        <option value="">Limal</option>
+                        <option value="">Chaumont-Gistoux</option>
+                        <option value="">Rixensart</option>
+                        <option value="">Ottignies-Louvain-La-Neuve</option>
+                        <option value="">Perwez</option>
+                        <option value="">Jodoigne</option>
+                        <option value="">Nivelles</option>
+                        <option value="">Baulers</option>
+                        <option value="">Braine-l'Alleud</option>
+                        <option value="">Mont-St-Guibert</option>
+                        <option value="">Bousval</option>
+                        <option value="">Tubize</option>
+                        <option value="">Villers-la-Ville</option>
+                        <option value="">Drogenbos</option>
+                    </select>
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-label">
+                        <div class="setting-name">Position</div>
+                        <div class="setting-desc">Votre rôle dans l'équipe</div>
+                    </div>
+                    <select class="select-input">
+                        <option>Joueuse</option>
+                        <option>Joueur</option>
+                        <option>Coach</option>
+                    </select>
+                </div>
+            </section>
+            <section class="settings-section">
+            <h2 class="section-title">
+            <span class="section-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 22q-.825 0-1.412-.587T4 20V10q0-.825.588-1.412T6 8h1V6q0-2.075 1.463-3.537T12 1t3.538 1.463T17 6v2h1q.825 0 1.413.588T20 10v10q0 .825-.587 1.413T18 22zm7.413-5.587Q14 15.825 14 15t-.587-1.412T12 13t-1.412.588T10 15t.588 1.413T12 17t1.413-.587M9 8h6V6q0-1.25-.875-2.125T12 3t-2.125.875T9 6z"/></svg>
+            </span>
+            Confidentialité
+            </h2>
+            <div class="setting-row">
+            <div class="setting-label">
+                <div class="setting-name">Profil public</div>
+                <div class="setting-desc">Visible par tous les utilisateurs</div>
+            </div>
+            <input type="checkbox" id="public-profile" class="toggle-input" checked>
+            <label for="public-profile" class="toggle-label"></label>
+            </div>
+
+            <div class="setting-row">
+            <div class="setting-label">
+                <div class="setting-name">Afficher les statistiques</div>
+                <div class="setting-desc">Points et matchs joués visibles</div>
+            </div>
+            <input type="checkbox" id="show-stats" class="toggle-input" checked>
+            <label for="show-stats" class="toggle-label"></label>
+            </div>
+
+            <div class="setting-row">
+            <div class="setting-label">
+                <div class="setting-name">Autoriser les messages</div>
+                <div class="setting-desc">Recevoir des messages d'autres joueurs</div>
+            </div>
+            <input type="checkbox" id="allow-messages" class="toggle-input" checked>
+            <label for="allow-messages" class="toggle-label"></label>
+            </div>
+        </section>
+        <section class="settings-section">
+            <h2 class="section-title">
+            <span class="section-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7v3.528a1 1 0 0 1-.105.447l-1.717 3.433A1.1 1.1 0 0 0 4.162 18h15.676a1.1 1.1 0 0 0 .984-1.592l-1.716-3.433a1 1 0 0 1-.106-.447V9a7 7 0 0 0-7-7m0 19a3 3 0 0 1-2.83-2h5.66A3 3 0 0 1 12 21"/></g></svg>
+            </span>
+            Notifications
+            </h2>
+
+            <div class="setting-row">
+            <div class="setting-label">
+                <div class="setting-name">Notifications push</div>
+                <div class="setting-desc">Alertes sur votre appareil</div>
+            </div>
+            <input type="checkbox" id="push-notif" class="toggle-input" checked>
+            <label for="push-notif" class="toggle-label"></label>
+            </div>
+
+            <div class="setting-row">
+            <div class="setting-label">
+                <div class="setting-name">Notifications email</div>
+                <div class="setting-desc">Résumé hebdomadaire par email</div>
+            </div>
+            <input type="checkbox" id="email-notif" class="toggle-input">
+            <label for="email-notif" class="toggle-label"></label>
+            </div>
+
+            <div class="setting-row">
+            <div class="setting-label">
+                <div class="setting-name">Nouveaux matchs</div>
+                <div class="setting-desc">Alerte lors de nouveaux matchs programmés</div>
+            </div>
+            <input type="checkbox" id="new-match" class="toggle-input" checked>
+            <label for="new-match" class="toggle-label"></label>
+            </div>
+
+            <div class="setting-row">
+            <div class="setting-label">
+                <div class="setting-name">Demandes d'amis</div>
+                <div class="setting-desc">Notification de nouvelles demandes</div>
+            </div>
+            <input type="checkbox" id="friend-req" class="toggle-input" checked>
+            <label for="friend-req" class="toggle-label"></label>
+            </div>
+        </section>
+        <section class="settings-section">
+        <h2 class="section-title">
+        <span class="section-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21q-3.325 0-5.663-2.3T4 13.125q0-1.65.625-3.062T6.35 7.55L12 2l5.65 5.55q1.1 1.1 1.725 2.513T20 13.125q0 3.275-2.337 5.575T12 21m0-2V4.8L7.75 9q-.875.825-1.312 1.875T6 13.125q0 2.425 1.75 4.15T12 19"/></svg>
+        </span>
+        Apparence
+        </h2>
+
+        <div class="setting-row">
+        <div class="setting-label">
+            <div class="setting-name">Thème</div>
+            <div class="setting-desc">Mode clair ou sombre</div>
+        </div>
+        <select class="select-input">
+            <option>Clair</option>
+            <option>Sombre</option>
+            <option>Automatique</option>
+        </select>
+        </div>
+
+        <div class="setting-row">
+        <div class="setting-label">
+            <div class="setting-name">Langue</div>
+            <div class="setting-desc">Langue de l'interface</div>
+        </div>
+        <select class="select-input">
+            <option>Français</option>
+            <option>English</option>
+            <option>Nederlands</option>
+            <option>Deutsch</option>
+        </select>
+        </div>
+
+        <div class="setting-row">
+        <div class="setting-label">
+            <div class="setting-name">Animations</div>
+            <div class="setting-desc">Désactiver pour améliorer les performances</div>
+        </div>
+        <input type="checkbox" id="animations" class="toggle-input" checked>
+        <label for="animations" class="toggle-label"></label>
+        </div>
+    </section>
+    <section class="settings-section">
+        <h2 class="section-title">
+        <span class="section-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M13.435 2.075a3.33 3.33 0 0 0-2.87 0c-.394.189-.755.497-1.26.928l-.079.066a2.56 2.56 0 0 1-1.58.655l-.102.008c-.662.053-1.135.09-1.547.236a3.33 3.33 0 0 0-2.03 2.029c-.145.412-.182.885-.235 1.547l-.008.102a2.56 2.56 0 0 1-.655 1.58l-.066.078c-.431.506-.74.867-.928 1.261a3.33 3.33 0 0 0 0 2.87c.189.394.497.755.928 1.26l.066.079c.41.48.604.939.655 1.58l.008.102c.053.662.09 1.135.236 1.547a3.33 3.33 0 0 0 2.029 2.03c.412.145.885.182 1.547.235l.102.008c.629.05 1.09.238 1.58.655l.078.066c.506.431.867.74 1.261.928a3.33 3.33 0 0 0 2.87 0c.394-.189.755-.497 1.26-.928l.079-.066c.48-.41.939-.604 1.58-.655l.102-.008c.662-.053 1.135-.09 1.547-.236a3.33 3.33 0 0 0 2.03-2.029c.145-.412.182-.885.235-1.547l.008-.102c.05-.629.238-1.09.655-1.58l.066-.079c.431-.505.74-.866.928-1.26a3.33 3.33 0 0 0 0-2.87c-.189-.394-.497-.755-.928-1.26l-.066-.079a2.56 2.56 0 0 1-.655-1.58l-.008-.102c-.053-.662-.09-1.135-.236-1.547a3.33 3.33 0 0 0-2.029-2.03c-.412-.145-.885-.182-1.547-.235l-.102-.008a2.56 2.56 0 0 1-1.58-.655l-.079-.066c-.505-.431-.866-.74-1.26-.928M12 6.877a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0v-5.5a.75.75 0 0 1 .75-.75m.75 8.996v.5a.75.75 0 0 1-1.5 0v-.5a.75.75 0 0 1 1.5 0"/></svg>
+        </span>
+        Zone dangereuse
+        </h2>
+
+        <div class="setting-row">
+        <div class="setting-label">
+            <div class="setting-name">Exporter mes données</div>
+            <div class="setting-desc">Télécharger toutes vos informations</div>
+        </div>
+        <button class="btn btn-secondary">Exporter</button>
+        </div>
+
+        <div class="setting-row">
+        <div class="setting-label">
+            <div class="setting-name">Supprimer mon compte</div>
+            <div class="setting-desc">Action irréversible</div>
+        </div>
+        <button class="btn btn-danger">Supprimer</button>
+        </div>
+    </section>
+    <div style="margin-top: 24px; text-align: right;">
+        <button class="btn" style="padding: 12px 32px; font-size: 15px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16"><path fill="currentColor" d="M5 2v2.5A1.5 1.5 0 0 0 6.5 6h2A1.5 1.5 0 0 0 10 4.5V2h.379a2 2 0 0 1 1.414.586l1.621 1.621A2 2 0 0 1 14 5.621V12a2 2 0 0 1-2 2V9.5A1.5 1.5 0 0 0 10.5 8h-5C4.673 8 4 8.669 4 9.498V14a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm1 0v2.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5V2zM5 14h6V9.5a.5.5 0 0 0-.5-.5h-5c-.277 0-.5.223-.5.498z"/></svg> Enregistrer les modifications
+        </button>
+    </div>
+    <div id="amis-popup" class="popup">
+    <div class="popup-content">
+        <a href="#" class="popup-close">✕</a>
+        <h2>Mes Amis</h2>
+        
+        <div class="amis-list">
+            <div class="ami-item">
+                <div class="ami-info">
+                    <p class="ami-name">Pink-Spikers-Club</p>
+                    <p class="ami-role">Équipe • Dôme Sakura</p>
+                </div>
+                <button class="btn-message">Message</button>
+            </div>
+
+            <div class="ami-item">
+                <div class="ami-info">
+                    <p class="ami-name">Beach-Volley-Vibes</p>
+                    <p class="ami-role">Équipe • Rochefort</p>
+                </div>
+                <button class="btn-message">Message</button>
+            </div>
+
+            <div class="ami-item">
+                <div class="ami-info">
+                    <p class="ami-name">Volley-Meme-King</p>
+                    <p class="ami-role">Club • Belgique</p>
+                </div>
+                <button class="btn-message">Message</button>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,112 @@
+body {
+    font-family: Noto;
+    background-image: url('/asset/image/back2.1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+hr {
+    margin: 10px;
+    width: 50%;
+}
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #7FA99B;
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+.google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffffff;
+    width: 30%;
+    border: solid #000000 1px;
+    margin: 10px;
+    color: #2D3748;
+    font-size: 16px;
+}
+.google p {
+    margin: 10px;
+}
+
+.facebook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffffff;
+    width: 30%;
+    border: solid #000000 1px;
+    margin: 10px;
+    color: #2D3748;
+    font-size: 16px;
+}
+.facebook p {
+    margin: 10px;
+}
+
+.google:hover{
+    text-decoration: underline;
+}
+
+.facebook:hover{
+    text-decoration: underline;
+}
+
+form {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    color: #4A5568;
+    font-size: 16px;
+}
+
+form a {
+    text-decoration: none;
+    color: #ffffffff;
+    padding: 5px;
+    font-size: 16px;
+    margin: -5px;
+}
+
+form button {
+    text-align: center;
+    margin-top: 14px;
+    background-color: #5B7C99;
+    border-radius: 14px;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.angel:hover {
+    color: #4169E1;
+}
+
+.croissant:hover {
+
+}
+
+.miku:hover {
+
+}
+
+.fusée:hover {
+
+}
+
+@font-face {
+    font-family: Noto;
+    src: url(font/NotoSansJP-VariableFont_wght.ttf);
+}

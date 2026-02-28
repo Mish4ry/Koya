@@ -1,0 +1,192 @@
+body {
+    font-family: Exo;
+    background-color: #f2f2f2;
+    margin: 0;
+    /*src="https://www.w3schools.com/cssref/pr_background-image.php"*/
+    background-image: url('/asset/image/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    font-family: Bebas;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 300px;
+    color: #5B7C99bf;
+    margin: 0;
+}
+
+header img {
+    width: 467.45px;
+    height: 294.31px;
+    background: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding-top: 255px;
+    padding-bottom: 113px;
+}
+
+.button {
+    position: relative;
+    /* src="Recherche dans les option de vscode*/
+    display: inline-block;
+    background-color: #1D1F21;
+    border-radius: 35px;
+    padding: 15px;
+}
+
+nav img {
+    width: 535px;
+    height: 307px;
+    display: block;
+    border-radius: 20px;
+}
+
+.button-lien {
+    /* src="https://www.w3schools.com/cssref/css3_pr_transform.php"*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #857C7A;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border:solid #E9ECEF 2px;
+    padding: 5px;
+}
+
+.section-koya {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.koya-titre {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 205px;
+    height: 205px;
+    background-color: #ffffffCC;
+    border-radius: 50%;
+    border: solid #E9ECEF 3px;
+    margin: 37px;
+    color: #857C7A;
+}
+
+.koya-txt {
+    padding-left: 19px;
+    padding-right: 0;
+    display: flex;
+    width: 700px;
+    height: 136px;
+    background-color: #ffffffCC;
+    border-radius: 25px;
+    border: solid #E9ECEF 3px;
+    justify-content: flex-end;
+    font-size: 24px;
+    align-items: center;
+    color: #857C7A;
+}
+
+.section-fonction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fonction-titre {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 245px;
+    height: 245px;
+    background-color: #ffffffCC;
+    border-radius: 50%;
+    border: solid #E9ECEF 3px;
+    margin: 37px;
+    color: #857C7A;
+}
+
+.fonction-txt {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+    padding-left: 19px;
+    padding-right: 0;
+    display: flex;
+    width: 700px;
+    height: 245px;
+    background-color: #ffffffCC;
+    border-radius: 25px;
+    border: solid #E9ECEF 3px;
+    color: #857C7A;
+}
+
+.titre {
+    font-size: 24px;
+    margin: 0;
+    margin-top: 16px;
+    margin-left: 19px;
+}
+
+.stitre {
+    font-size: 16px;
+    margin: 19px;
+}
+
+footer {
+    text-align: center;
+    background-color: #E9ECEFCC;
+    color: #857C7A;
+}
+footer table {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+
+ul {
+    /* src="https://karac.ch/blog/tout-savoir-sur-les-listes-a-puces-et-numerotees-html#puces-perso"*/
+    list-style-type: none;
+}
+li::before {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: 0.4rem;
+    margin-right: 0.4rem;
+    content: "";
+    background-image: url(/asset/image/puce.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@font-face {
+    font-family: Bebas;
+    src: url(font/BebasNeue-Regular.otf);
+}
+
+@font-face {
+    font-family: Nato;
+    src: url(font/NotoSansJP-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Exo;
+    src: url(font/Exo2-VariableFont_wght.ttf);
+}

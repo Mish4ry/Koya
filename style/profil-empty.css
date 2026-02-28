@@ -1,0 +1,381 @@
+@font-face {
+    font-family: Noto;
+    src: url(font/NotoSansJP-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(font/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+:root {
+    --bg-main: #C3E3FF;
+    --bg-secondary: #FFFFFF;
+    --bg-sidebar: #B4D9FB;
+    --bg-posts: #F7FAFF;
+    --txt-primary: #0E2A47;
+    --txt-secondary: #527494;
+    --Message-Box-Color: #E8F4FF;
+    --border-color: #A7D5FF;
+    --blue: #2B5F8C;
+    --hover-bg: #1D4468;
+    --transition-go: 0.5s ease;
+    --transition-return:0.5s ease;
+}
+
+body {
+    background-color: #C3E3FF;
+    margin: 0;
+    display: flex;
+    font-family: Inter;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.left-sidebar {
+    position: fixed;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    border-right: 1px solid var(--border-color);
+    padding: 20px;
+    background-color: var(--bg-sidebar);
+}
+
+.left-sidebar .logo {
+    font-size: 1.5rem;
+    font-family: "Montserrat", cursive;
+}
+
+.left-sidebar .logo img {
+    width: 100px;
+}
+
+nav {
+    margin-top: 25px;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+    padding: 15px 10px;
+    gap: 15px;
+    border-radius: 10px;
+    transition: var(--transition-return);
+}
+
+nav a img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: var(--transition-return);
+}
+
+nav a span {
+    color: #0E2A47;
+    transition: var(--transition-return);
+}
+
+nav a:hover {
+    background-color: var(--hover-bg);
+    transition: var(--transition-go);
+}
+
+nav a:hover span {
+    color: white;
+}
+
+nav a:hover img{
+    transition: var(--transition-go);
+    filter: invert(1) brightness(2);
+}
+
+nav a.profil-pic:hover img {
+    filter: none;
+}
+
+nav .active {
+    font-weight: 600;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+    margin-top: 54px;
+    border: none;
+}
+
+.surimg {
+    text-align: center;
+    position: absolute;
+    width: 686px;
+    height: 219.68px;
+    top: 159.32px;
+    left: 297px;
+    background: #FFFFFF;
+    border-radius: 35px;
+}
+
+/* src="https://developer.mozilla.org/fr/docs/Web/CSS/Reference/Values/filter-function/opacity"*/
+.essential{
+    position: absolute;
+    width: 686px;
+    height: 325px;
+    left: 297px;
+    top: 54px;
+    background: url(../asset/image/banniere-default.png);
+    filter:opacity(80%);
+    border-radius: 35px;
+}
+
+.pp img{
+    position: absolute;
+    border-radius: 50%;
+    width: 120.19px;
+    height: 120.19px;
+    left: 351.91px;
+    top: 119.29px;
+}
+
+table {
+    display: flex;
+    justify-content: space-around;
+}
+
+table th {
+    padding-left: 15px;
+}
+
+.line {
+    border-left: 2px solid black;
+    height: 84.26px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th, td {
+    border-left: 2px solid black;
+    padding: 12px;
+}
+
+.first {
+    border-left: none;
+}
+
+.match {
+    color: #7FA99B;
+    border-left: none;
+    font-size: 36px;
+}
+
+.second {
+    color: #7FA99B;
+    font-size: 36px;
+}
+
+.LRE {
+    position: absolute;
+    width: 462px;
+    height: 219px;
+    left: 409px;
+    top: 435px;
+    background-color: #FFFFFF;
+    border-radius: 35px;
+}
+
+.idk {
+    margin-top: 52px;
+    margin-bottom: 12px;
+}
+
+select {
+    background: none;
+    border: none;
+}
+
+.maitrise {
+    position: absolute;
+    left: 31px;
+    margin-top: 0;
+    width: 100px;
+    border: 2px solid #7FA99B;
+    border-radius: 2px;
+    opacity: 50%;
+}
+
+.progression {
+    position: absolute;
+    left: 31px;
+    margin-top: 0;
+    width: 0px;
+    border: 2px solid #7FA99B;
+    border-radius: 2px;
+}
+
+.maitrise2 {
+    position: absolute;
+    left: 240px;
+    margin-top: 0;
+    width: 100px;
+    border: 2px solid #7FA99B;
+    border-radius: 2px;
+    opacity: 50%;
+}
+
+.progression2 {
+    position: absolute;
+    left: 240px;
+    margin-top: 0;
+    width: 0px;
+    border: 2px solid #7FA99B;
+    border-radius: 2px;
+}
+
+.LREbutton {
+    display: block;
+    margin-left: 30px;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid var(--txt-primary);
+    color: var(--txt-primary);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-return);
+}
+
+.LREbutton:hover {
+    background-color: var(--hover-bg);
+    color: white;
+    border-color: var(--hover-bg);
+    transition: var(--transition-go);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.popup:target {
+    display: flex;
+}
+
+.popup-content {
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+
+.popup-content h2 {
+    color: var(--txt-primary);
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+
+.popup-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+    color: var(--txt-secondary);
+    text-decoration: none;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.popup-close:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Liste amis */
+.amis-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ami-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(195, 227, 255, 0.2);
+    border: 1px solid var(--border-color);
+    transition: background 0.2s;
+}
+
+.ami-item:hover {
+    background: rgba(195, 227, 255, 0.4);
+}
+
+.ami-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border-color);
+    background: white;
+    flex-shrink: 0;
+}
+
+.ami-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.ami-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--txt-primary);
+    margin-bottom: 2px;
+}
+
+.ami-role {
+    font-size: 12px;
+    color: var(--txt-secondary);
+}
+
+.btn-message {
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+.btn-message:hover {
+    background: var(--hover-bg);
+}
