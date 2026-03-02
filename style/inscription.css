@@ -1,3 +1,9 @@
+@font-face {
+    font-family: Noto;
+    src: url(font/NotoSansJP-VariableFont_wght.ttf);
+}
+
+
 body {
     font-family: Noto;
     background-image: url('/asset/image/back2.1.png');
@@ -79,6 +85,13 @@ form a {
     margin: -5px;
 }
 
+form input,select {
+    margin: 5px;
+    padding: 5px;
+    border: solid #000000 1px;
+    border-radius: 5px;
+}
+
 .Create {
     text-align: center;
     margin-top: 14px;
@@ -90,7 +103,13 @@ form a {
     cursor: pointer;
 }
 
-@font-face {
-    font-family: Noto;
-    src: url(font/NotoSansJP-VariableFont_wght.ttf);
+footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer p {
+    margin: 10px;
+    color: #4A5568;
+    font-size: 16px;
 }
