@@ -1,0 +1,108 @@
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.popup:target {
+    display: flex;
+}
+
+.popup-content {
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    padding: 48px 32px 32px 32px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+
+.popup-content h2 {
+    color: var(--txt-primary);
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.popup-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+    color: var(--txt-secondary);
+    text-decoration: none;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.popup-close:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.amis-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ami-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(195, 227, 255, 0.2);
+    border: 1px solid var(--border-color);
+    transition: background 0.2s;
+}
+
+.ami-item:hover {
+    background: rgba(195, 227, 255, 0.4);
+}
+
+.ami-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.ami-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--txt-primary);
+    margin-bottom: 2px;
+}
+
+.ami-role {
+    font-size: 12px;
+    color: var(--txt-secondary);
+}
+
+.btn-message {
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+.btn-message:hover {
+    background: var(--hover-bg);
+}

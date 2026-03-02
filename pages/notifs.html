@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notifications</title>
     <link rel="stylesheet" href="../style/notifs.css">
+    <link rel="stylesheet" href="../style/common.css">
 </head>
 <body>
     <aside class="sidebar left-sidebar">
@@ -35,30 +36,121 @@
             </a>
         </nav>
     </aside>
+
     <main class="main-content">
-                <div class="page-header">
-                    <h1 class="page-title">Paramètres</h1>
-                    <p class="page-subtitle">Gérez vos préférences et paramètres de compte</p>
+        <div class="page-header">
+            <h1 class="page-title">Notifications</h1>
+            <p class="page-subtitle">Gérez vos préférences de notifications</p>
+        </div>
+
+        <div class="settings-section">
+            <h2 class="section-title">
+                <span class="section-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <g fill="none">
+                            <path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/>
+                            <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7v3.528a1 1 0 0 1-.105.447l-1.717 3.433A1.1 1.1 0 0 0 4.162 18h15.676a1.1 1.1 0 0 0 .984-1.592l-1.716-3.433a1 1 0 0 1-.106-.447V9a7 7 0 0 0-7-7m0 19a3 3 0 0 1-2.83-2h5.66A3 3 0 0 1 12 21"/>
+                        </g>
+                    </svg>
+                </span>
+                Préférences
+            </h2>
+
+            <div class="setting-row">
+                <div class="setting-label">
+                    <div class="setting-name">Notifications par Email</div>
+                    <div class="setting-desc">Recevoir un résumé par email</div>
                 </div>
-                <div class="settings-section">
-                    <h2 class="section-title">Notifications</h2>
-                    <div class="setting-item">
-                        <label for="notif-email">Notifications par Email</label>
-                        <input type="checkbox" id="notif-email" name="notif-email">
-                    </div>
-                    <div class="setting-item">
-                        <label for="notif-push">Notifications Push</label>
-                        <input type="checkbox" id="notif-push" name="notif-push">
-                    </div>
-                    <div class="setting-item">
-                        <label for="notif-sms">Notifications SMS</label>
-                        <input type="checkbox" id="notif-sms" name="notif-sms">
-                    </div>
-                    <div class="setting-item">
-                        <label for="notif-app">Notifications In-App</label>
-                        <input type="checkbox" id="notif-app" name="notif-app">
-                    </div>
+                <input type="checkbox" id="notif-email" class="toggle-input">
+                <label for="notif-email" class="toggle-label"></label>
+            </div>
+
+            <div class="setting-row">
+                <div class="setting-label">
+                    <div class="setting-name">Notifications Push</div>
+                    <div class="setting-desc">Alertes sur votre appareil</div>
                 </div>
+                <input type="checkbox" id="notif-push" class="toggle-input" checked>
+                <label for="notif-push" class="toggle-label"></label>
+            </div>
+
+            <div class="setting-row">
+                <div class="setting-label">
+                    <div class="setting-name">Notifications SMS</div>
+                    <div class="setting-desc">Recevoir des alertes par SMS</div>
+                </div>
+                <input type="checkbox" id="notif-sms" class="toggle-input">
+                <label for="notif-sms" class="toggle-label"></label>
+            </div>
+
+            <div class="setting-row">
+                <div class="setting-label">
+                    <div class="setting-name">Notifications In-App</div>
+                    <div class="setting-desc">Alertes dans l'application</div>
+                </div>
+                <input type="checkbox" id="notif-app" class="toggle-input" checked>
+                <label for="notif-app" class="toggle-label"></label>
+            </div>
+        </div>
+
+        <div class="fake-notif">
+            <h3 class="notif-title">Nouvelle publication de Pink Spikers club</h3>
+            <p class="notif-content">Pink Spikers club a publié une nouvelle photo de son Match à Paris.</p>
+            <span class="notif-time">Il y a 33 minutes</span>
+            <br>
+            <button class="voir">
+                <a href="feed.html">Voir la publication</a>
+            </button>
+        </div>
+
+        <div class="fake-notif">
+            <h3 class="notif-title">Nouvelle publication de Beach Volley Vibes</h3>
+            <p class="notif-content">Beach Volley Vibes a publié une nouvelle photo de ses vacances aux Maldives.</p>
+            <span class="notif-time">Il y a 1 heure</span>
+            <br>
+            <button class="voir">
+                <a href="feed.html">Voir la publication</a>
+            </button>
+        </div>
+
+        <div class="fake-notif">
+            <h3 class="notif-title">Nouvelle publication de Volley Meme King</h3>
+            <p class="notif-content">Volley Meme King a publié un nouveau meme.</p>
+            <span class="notif-time">Il y a 2 heures</span>
+            <br>
+            <button class="voir">
+                <a href="feed.html">Voir la publication</a>
+            </button>
+        </div>
     </main>
+    <div id="amis-popup" class="popup">
+        <div class="popup-content">
+            <a href="#" class="popup-close">✕</a>
+            <h2>Mes Amis</h2>
+            <div class="amis-list">
+                <div class="ami-item">
+                    <div class="ami-info">
+                        <p class="ami-name">Pink-Spikers-Club</p>
+                        <p class="ami-role">Équipe • Dôme Sakura</p>
+                    </div>
+                    <button class="btn-message">Message</button>
+                </div>
+                <div class="ami-item">
+                    <div class="ami-info">
+                        <p class="ami-name">Beach-Volley-Vibes</p>
+                        <p class="ami-role">Équipe • Rochefort</p>
+                    </div>
+                    <button class="btn-message">Message</button>
+                </div>
+                <div class="ami-item">
+                    <div class="ami-info">
+                        <p class="ami-name">Volley-Meme-King</p>
+                        <p class="ami-role">Club • Belgique</p>
+                    </div>
+                    <button class="btn-message">Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
