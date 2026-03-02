@@ -399,3 +399,17 @@ button {
     background-color: #2B5F8C;
     transform: scale(1.05);
 }
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+    text-align: center;
+    color: var(--txt-secondary);
+    font-size: 12px;
+}
+
+footer p {
+    align-items: flex-end;
+    margin: 0;
+}

@@ -110,3 +110,17 @@ nav a.profil-pic:hover img {
 nav .active {
     font-weight: 600;
 }
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+    text-align: center;
+    color: var(--txt-secondary);
+    font-size: 12px;
+}
+
+footer p {
+    align-items: flex-end;
+    margin: 0;
+}
