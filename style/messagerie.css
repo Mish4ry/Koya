@@ -1,119 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap');
 
-:root {
-    --bg-main: #C3E3FF;
-    --bg-secondary: #FFFFFF;
-    --bg-sidebar: #B4D9FB;
-    --txt-primary: #0E2A47;
-    --txt-secondary: #527494;
-    --border-color: #A7D5FF;
-    --blue: #2B5F8C;
-    --hover-bg: #1D4468;
-    --msg-out: #2B5F8C;
-    --msg-in: #FFFFFF;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
-}
-
-a { text-decoration: none; color: white; }
-button { border: none; background: none; cursor: pointer; }
-
-@font-face {
-    font-family: Noto;
-    src: url(font/NotoSansJP-VariableFont_wght.ttf);
-}
-
-@font-face {
-    font-family: Inter;
-    src: url(font/Inter-VariableFont_opsz\,wght.ttf);
-}
-
-body {
-    background-color: #C3E3FF;
-    margin: 0;
-    display: flex;
-    font-family: Inter;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-.left-sidebar {
-    position: fixed;
-    left: 0;
-    width: 200px;
-    height: 100vh;
-    border-right: 1px solid var(--border-color);
-    padding: 20px;
-    background-color: var(--bg-sidebar);
-}
-
-.left-sidebar .logo {
-    font-size: 1.5rem;
-    font-family: "Montserrat", cursive;
-    display: flex;
-    align-items: center;
-}
-
-.left-sidebar .logo img {
-    width: 100px;
-}
-
-nav {
-    margin-top: 25px;
-}
-
-nav a {
-    display: flex;
-    align-items: center;
-    margin: 12px 0;
-    padding: 15px 10px;
-    gap: 15px;
-    border-radius: 10px;
-    transition: var(--transition-return);
-}
-
-nav a img {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: var(--transition-return);
-}
-
-nav a span {
-    color: var(--txt-primary);
-    transition: var(--transition-return);
-}
-
-nav a:hover {
-    background-color: var(--hover-bg);
-    transition: var(--transition-go);
-}
-
-nav a:hover span {
-    color: white;
-}
-
-nav a:hover img{
-    transition: var(--transition-go);
-    filter: invert(1) brightness(2);
-}
-
-nav a.profil-pic:hover img {
-    filter: none;
-}
-
-nav .active {
-    font-weight: 600;
-}
+body { display: flex; }
 
 .chat-layout {
     margin-left: 200px;
@@ -124,8 +11,8 @@ nav .active {
 
 .conversations-list {
     width: 280px;
-    background: var(--bg-secondary);
-    border-right: 1px solid var(--border-color);
+    background: var(--color-white);
+    border-right: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
@@ -133,14 +20,14 @@ nav .active {
 
 .conv-header {
     padding: 20px;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .conv-header h2 {
     font-size: 18px;
     font-family: "Bebas Neue", cursive;
     letter-spacing: 1px;
-    color: var(--txt-primary);
+    color: var(--color-text-primary);
 }
 
 .conv-item {
@@ -150,18 +37,18 @@ nav .active {
     padding: 14px 20px;
     cursor: pointer;
     transition: background 0.2s;
-    border-bottom: 1px solid rgba(167, 213, 255, 0.3);
+    border-bottom: 1px solid rgba(232, 232, 236, 0.5);
 }
 
-.conv-item.active { background: #E8F4FF; }
-.conv-item:hover { background: #f0f8ff; }
+.conv-item.active { background: var(--color-tag-bg); }
+.conv-item:hover { background: var(--color-bg); }
 
 .conv-avatar {
     width: 44px;
     height: 44px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--border-color);
+    border: 2px solid var(--color-border);
     flex-shrink: 0;
 }
 
@@ -170,7 +57,7 @@ nav .active {
 .conv-name {
     font-size: 13px;
     font-weight: 700;
-    color: var(--txt-primary);
+    color: var(--color-text-primary);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -178,7 +65,7 @@ nav .active {
 
 .conv-preview {
     font-size: 11px;
-    color: var(--txt-secondary);
+    color: var(--color-text-muted);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -187,7 +74,7 @@ nav .active {
 
 .conv-time {
     font-size: 10px;
-    color: var(--txt-secondary);
+    color: var(--color-text-muted);
     flex-shrink: 0;
 }
 
@@ -195,12 +82,12 @@ nav .active {
     flex: 1;
     display: flex;
     flex-direction: column;
-    background: var(--bg-main);
+    background: var(--color-bg);
 }
 
 .chat-header {
-    background: var(--bg-secondary);
-    border-bottom: 1px solid var(--border-color);
+    background: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
     padding: 16px 24px;
     display: flex;
     align-items: center;
@@ -212,30 +99,26 @@ nav .active {
     height: 42px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--border-color);
+    border: 2px solid var(--color-border);
 }
 
 .chat-header-info h3 {
     font-size: 15px;
     font-weight: 700;
-    color: var(--txt-primary);
+    color: var(--color-text-primary);
 }
 
 .chat-header-info p {
     font-size: 11px;
-    color: #4caf50;
+    color: var(--color-active-dot);
     font-weight: 600;
 }
 
-.chat-header-actions {
-    margin-left: auto;
-    display: flex;
-    gap: 8px;
-}
+.chat-header-actions { margin-left: auto; display: flex; gap: 8px; }
 
 .btn-lre {
-    background: var(--blue);
-    color: white;
+    background: var(--color-dark);
+    color: var(--color-white);
     border: none;
     border-radius: 10px;
     padding: 8px 16px;
@@ -243,14 +126,13 @@ nav .active {
     font-weight: 700;
     cursor: pointer;
     transition: background 0.2s;
-    font-family: "Montserrat", sans-serif;
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
-.btn-lre:hover { background: var(--hover-bg); }
+.btn-lre:hover { background: var(--color-text-primary); }
 
 .messages-area {
     flex: 1;
@@ -265,7 +147,7 @@ nav .active {
     text-align: center;
     font-size: 11px;
     font-weight: 600;
-    color: var(--txt-secondary);
+    color: var(--color-text-muted);
     position: relative;
 }
 
@@ -276,7 +158,7 @@ nav .active {
     top: 50%;
     width: 40%;
     height: 1px;
-    background: var(--border-color);
+    background: var(--color-border);
 }
 
 .date-separator::before { left: 0; }
@@ -289,9 +171,7 @@ nav .active {
     animation: fadeIn 0.3s ease both;
 }
 
-.message-row.out {
-    flex-direction: row-reverse;
-}
+.message-row.out { flex-direction: row-reverse; }
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(8px); }
@@ -312,7 +192,7 @@ nav .active {
     height: 32px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--border-color);
+    border: 2px solid var(--color-border);
     flex-shrink: 0;
 }
 
@@ -322,7 +202,7 @@ nav .active {
 .msg-sender {
     font-size: 10px;
     font-weight: 700;
-    color: var(--txt-secondary);
+    color: var(--color-text-muted);
     margin-bottom: 4px;
     padding: 0 6px;
 }
@@ -336,21 +216,21 @@ nav .active {
 }
 
 .message-row.in .msg-bubble {
-    background: var(--msg-in);
-    color: var(--txt-primary);
+    background: var(--color-white);
+    color: var(--color-text-primary);
     border-bottom-left-radius: 4px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
 .message-row.out .msg-bubble {
-    background: var(--msg-out);
-    color: white;
+    background: var(--color-dark);
+    color: var(--color-white);
     border-bottom-right-radius: 4px;
 }
 
 .msg-bubble.special {
-    background: linear-gradient(135deg, #1a4a70, #2B5F8C);
-    color: white;
+    background: linear-gradient(135deg, #0e1a30, var(--color-dark));
+    color: var(--color-white);
     border: 1px solid rgba(255,255,255,0.2);
     border-radius: 16px !important;
 }
@@ -363,23 +243,10 @@ nav .active {
     border: 1px solid rgba(255,255,255,0.2);
 }
 
-.msg-bubble.special .lre-card h4 {
-    font-size: 13px;
-    font-weight: 700;
-    margin-bottom: 4px;
-}
+.msg-bubble.special .lre-card h4 { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+.msg-bubble.special .lre-card p { font-size: 11px; opacity: 0.85; }
 
-.msg-bubble.special .lre-card p {
-    font-size: 11px;
-    opacity: 0.85;
-}
-
-.msg-bubble.special .lre-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-top: 8px;
-}
+.msg-bubble.special .lre-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
 
 .msg-bubble.special .lre-tag {
     background: rgba(255,255,255,0.2);
@@ -392,8 +259,8 @@ nav .active {
 .msg-bubble.special .lre-btn {
     display: inline-block;
     margin-top: 10px;
-    background: white;
-    color: var(--blue);
+    background: var(--color-white);
+    color: var(--color-tag-text);
     border-radius: 8px;
     padding: 6px 14px;
     font-size: 12px;
@@ -404,16 +271,11 @@ nav .active {
 
 .msg-bubble.special .lre-btn:hover { opacity: 0.85; }
 
-.msg-time {
-    font-size: 10px;
-    color: var(--txt-secondary);
-    margin-top: 4px;
-    padding: 0 6px;
-}
+.msg-time { font-size: 10px; color: var(--color-text-muted); margin-top: 4px; padding: 0 6px; }
 
 .chat-input-area {
-    background: var(--bg-secondary);
-    border-top: 1px solid var(--border-color);
+    background: var(--color-white);
+    border-top: 1px solid var(--color-border);
     padding: 16px 24px;
     display: flex;
     align-items: center;
@@ -422,24 +284,23 @@ nav .active {
 
 .chat-input {
     flex: 1;
-    background: var(--bg-main);
-    border: 1px solid var(--border-color);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
     border-radius: 24px;
     padding: 10px 18px;
     font-size: 13px;
-    font-family: "Montserrat", sans-serif;
-    color: var(--txt-primary);
+    color: var(--color-text-primary);
     outline: none;
 }
 
-.chat-input:focus { border-color: var(--blue); }
+.chat-input:focus { border-color: var(--color-tag-text); }
 
 .send-btn {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: var(--blue);
-    color: white;
+    background: var(--color-dark);
+    color: var(--color-white);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -449,10 +310,9 @@ nav .active {
     flex-shrink: 0;
 }
 
-.send-btn:hover { background: var(--hover-bg); }
+.send-btn:hover { background: var(--color-text-primary); }
 
 @media (max-width: 768px) {
-    .left-sidebar { display: none; }
     .chat-layout { margin-left: 0; width: 100%; }
     .conversations-list { display: none; }
 }
