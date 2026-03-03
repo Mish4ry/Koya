@@ -104,6 +104,7 @@ nav a.profil-pic:hover img {
 nav .active {
     font-weight: 600;
 }
+
 section {
     display: flex;
     justify-content: center;
