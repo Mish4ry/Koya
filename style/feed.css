@@ -218,3 +218,7 @@
     font-weight: 500;
     transition: background 0.2s;
 }
+
+.suivi:hover {
+    background-color: var(--color-primary-dark);
+}

@@ -42,11 +42,13 @@
 
     <div class="chat-layout">
 
+        <!-- Liste des conversations -->
         <div class="conversations-list">
             <div class="conv-header">
                 <h2>Messages</h2>
             </div>
-            <div class="conv-item active">
+
+            <div class="conv-item" onclick="showConv('psc')" id="tab-psc">
                 <img src="../asset/image/PSC.png" alt="Pink Spikers" class="conv-avatar">
                 <div class="conv-info">
                     <div class="conv-name">Pink Spikers Club</div>
@@ -54,9 +56,28 @@
                 </div>
                 <span class="conv-time">14:32</span>
             </div>
+
+            <div class="conv-item active" onclick="showConv('bvv')" id="tab-bvv">
+                <img src="../asset/image/BVV.png" alt="Beach Volley Vibes" class="conv-avatar">
+                <div class="conv-info">
+                    <div class="conv-name">Beach Volley Vibes</div>
+                    <div class="conv-preview">On est chauds pour le beach 🏖️</div>
+                </div>
+                <span class="conv-time">hier</span>
+            </div>
+
+            <div class="conv-item" onclick="showConv('vmk')" id="tab-vmk">
+                <img src="../asset/image/VMK_logo.jpg" alt="Volley Meme King" class="conv-avatar">
+                <div class="conv-info">
+                    <div class="conv-name">Volley Meme King</div>
+                    <div class="conv-preview">Le meme est trop bon 😂</div>
+                </div>
+                <span class="conv-time">lun.</span>
+            </div>
         </div>
 
-        <div class="chat-window">
+        <!-- Conversation PSC -->
+        <div class="chat-window" id="conv-psc" style="display:none;">
             <div class="chat-header">
                 <img src="../asset/image/PSC.png" alt="Pink Spikers Club">
                 <div class="chat-header-info">
@@ -70,11 +91,8 @@
                     </a>
                 </div>
             </div>
-
             <div class="messages-area">
-
                 <div class="date-separator">Aujourd'hui</div>
-
                 <div class="message-row in">
                     <img src="../asset/image/PSC.png" alt="" class="msg-avatar">
                     <div class="msg-bubble-wrap">
@@ -83,7 +101,6 @@
                         <span class="msg-time">14:10</span>
                     </div>
                 </div>
-
                 <div class="message-row in">
                     <img src="../asset/image/PSC.png" alt="" class="msg-avatar">
                     <div class="msg-bubble-wrap">
@@ -91,7 +108,6 @@
                         <span class="msg-time">14:11</span>
                     </div>
                 </div>
-
                 <div class="message-row out">
                     <img src="../asset/image/Misha-logo.jpeg" alt="" class="msg-avatar">
                     <div class="msg-bubble-wrap">
@@ -100,7 +116,6 @@
                         <span class="msg-time">14:18</span>
                     </div>
                 </div>
-
                 <div class="message-row out">
                     <img src="../asset/image/Misha-logo.jpeg" alt="" class="msg-avatar">
                     <div class="msg-bubble-wrap">
@@ -108,7 +123,6 @@
                         <span class="msg-time">14:19</span>
                     </div>
                 </div>
-
                 <div class="message-row out">
                     <img src="../asset/image/Misha-logo.jpeg" alt="" class="msg-avatar">
                     <div class="msg-bubble-wrap">
@@ -116,10 +130,10 @@
                             On aimerait lancer un <strong>Locker Room Exchange</strong> avec votre club !
                             <div class="lre-card">
                                 <h4>📋 Proposition LRE — Rochefort × Pink Spikers</h4>
-                                <p class="txt-lre">On offre notre expertise en service flottant et attaque en contre. On cherche du renfort sur la passe et la réception en zone 6.</p>
+                                <p>On offre notre expertise en service flottant et attaque en contre. On cherche du renfort sur la passe et la réception en zone 6.</p>
                                 <div class="lre-tags">
                                     <span class="lre-tag">Service</span>
-                                   <span class="lre-tag">Attaque</span>
+                                    <span class="lre-tag">Attaque</span>
                                     <span class="lre-tag">Passe</span>
                                     <span class="lre-tag">Zone 6</span>
                                 </div>
@@ -129,7 +143,6 @@
                         <span class="msg-time">14:21</span>
                     </div>
                 </div>
-
                 <div class="message-row in">
                     <img src="../asset/image/PSC.png" alt="" class="msg-avatar">
                     <div class="msg-bubble-wrap">
@@ -138,7 +151,6 @@
                         <span class="msg-time">14:28</span>
                     </div>
                 </div>
-
                 <div class="message-row in">
                     <img src="../asset/image/PSC.png" alt="" class="msg-avatar">
                     <div class="msg-bubble-wrap">
@@ -146,9 +158,206 @@
                         <span class="msg-time">14:32</span>
                     </div>
                 </div>
-
             </div>
+            <div class="chat-input-area">
+                <input type="text" class="chat-input" placeholder="Écrire un message...">
+                <button class="send-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M3 20V4l19 8zm2-3l11.85-5L5 7v3.5l6 1.5l-6 1.5zm0 0V7v13z"/></svg>
+                </button>
+            </div>
+        </div>
 
+        <!-- Conversation BVV -->
+        <div class="chat-window" id="conv-bvv" style="display:flex;">
+            <div class="chat-header">
+                <img src="../asset/image/BVV.png" alt="Beach Volley Vibes">
+                <div class="chat-header-info">
+                    <h3>Beach Volley Vibes</h3>
+                    <p>● En ligne</p>
+                </div>
+                <div class="chat-header-actions">
+                    <a href="lre.html" class="btn-lre">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M19.59 12L15 7.41v2.46l-.86.13c-4.31.61-7.23 2.87-8.9 6.33c2.32-1.64 5.2-2.43 8.76-2.43h1v2.69m-2-1.69v.02c-4.47.21-7.67 1.82-10 5.08c1-5 4-10 11-11V5l7 7l-7 7v-4.1c-.33 0-.66.01-1 .02Z"/></svg>
+                        Demander un LRE
+                    </a>
+                </div>
+            </div>
+            <div class="messages-area">
+                <div class="date-separator">Hier</div>
+                <div class="message-row in">
+                    <img src="../asset/image/BVV.png" alt="" class="msg-avatar">
+                    <div class="msg-bubble-wrap">
+                        <span class="msg-sender">Beach Volley Vibes</span>
+                        <div class="msg-bubble">Yo Misha ! Vous êtes dispo pour un match amical sur le sable ce samedi ? On organise une session beach à Namur 🏖️</div>
+                        <span class="msg-time">10:05</span>
+                    </div>
+                </div>
+                <div class="message-row out">
+                    <img src="../asset/image/Misha-logo.jpeg" alt="" class="msg-avatar">
+                    <div class="msg-bubble-wrap">
+                        <span class="msg-sender">Misha</span>
+                        <div class="msg-bubble">Haha le beach c'est pas trop notre terrain mais pourquoi pas 😄 C'est à quelle heure ?</div>
+                        <span class="msg-time">10:22</span>
+                    </div>
+                </div>
+                <div class="message-row in">
+                    <img src="../asset/image/BVV.png" alt="" class="msg-avatar">
+                    <div class="msg-bubble-wrap">
+                        <span class="msg-sender">Beach Volley Vibes</span>
+                        <div class="msg-bubble">14h sur les courts de la plaine de jeux ! On a 4 joueurs confirmés, on cherche encore 2 équipes 🙌</div>
+                        <span class="msg-time">10:30</span>
+                    </div>
+                </div>
+                <div class="message-row in">
+                    <img src="../asset/image/BVV.png" alt="" class="msg-avatar">
+                    <div class="msg-bubble-wrap">
+                        <div class="msg-bubble">Et on peut aussi en profiter pour faire un échange de techniques ? Vous êtes trop forts en indoor, on aimerait bien apprendre quelques trucs sur la défense !</div>
+                        <span class="msg-time">10:31</span>
+                    </div>
+                </div>
+                <div class="message-row out">
+                    <img src="../asset/image/Misha-logo.jpeg" alt="" class="msg-avatar">
+                    <div class="msg-bubble-wrap">
+                        <div class="msg-bubble">Trop bien l'idée ! On peut faire ça. En échange vous nous montrez vos techniques de réception sur terrain instable, ça nous serait super utile 💪</div>
+                        <span class="msg-time">10:45</span>
+                    </div>
+                </div>
+                <div class="message-row out">
+                    <img src="../asset/image/Misha-logo.jpeg" alt="" class="msg-avatar">
+                    <div class="msg-bubble-wrap">
+                        <div class="msg-bubble special">
+                            On pourrait officialiser ça via un <strong>LRE</strong> ?
+                            <div class="lre-card">
+                                <h4>📋 Proposition LRE — KOYA × Beach Volley Vibes</h4>
+                                <p>On partage notre expertise défense indoor. En échange : techniques de réception et placement sur sable.</p>
+                                <div class="lre-tags">
+                                    <span class="lre-tag">Défense</span>
+                                    <span class="lre-tag">Réception</span>
+                                    <span class="lre-tag">Beach</span>
+                                    <span class="lre-tag">Placement</span>
+                                </div>
+                            </div>
+                            <a href="lre.html" class="lre-btn">Voir la demande complète →</a>
+                        </div>
+                        <span class="msg-time">10:47</span>
+                    </div>
+                </div>
+                <div class="message-row in">
+                    <img src="../asset/image/BVV.png" alt="" class="msg-avatar">
+                    <div class="msg-bubble-wrap">
+                        <span class="msg-sender">Beach Volley Vibes</span>
+                        <div class="msg-bubble">On est chauds pour le beach 🏖️ et pour le LRE ! On valide samedi après le match ?</div>
+                        <span class="msg-time">11:02</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" class="chat-input" placeholder="Écrire un message...">
+                <button class="send-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M3 20V4l19 8zm2-3l11.85-5L5 7v3.5l6 1.5l-6 1.5zm0 0V7v13z"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Conversation VMK -->
+        <div class="chat-window" id="conv-vmk" style="display:none;">
+            <div class="chat-header">
+                <img src="../asset/image/VMK_logo.jpg" alt="Volley Meme King">
+                <div class="chat-header-info">
+                    <h3>Volley Meme King</h3>
+                    <p>● Hors ligne</p>
+                </div>
+                <div class="chat-header-actions">
+                    <a href="lre.html" class="btn-lre">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M19.59 12L15 7.41v2.46l-.86.13c-4.31.61-7.23 2.87-8.9 6.33c2.32-1.64 5.2-2.43 8.76-2.43h1v2.69m-2-1.69v.02c-4.47.21-7.67 1.82-10 5.08c1-5 4-10 11-11V5l7 7l-7 7v-4.1c-.33 0-.66.01-1 .02Z"/></svg>
+                        Demander un LRE
+                    </a>
+                </div>
+            </div>
+            <div class="messages-area">
+                <div class="date-separator">Lundi</div>
+                <div class="message-row in">
+                    <img src="../asset/image/VMK_logo.jpg" alt="" class="msg-avatar">
+                    <div class="msg-bubble-wrap">
+                        <span class="msg-sender">Volley Meme King</span>
+                        <div class="msg-bubble">Misha t'as vu le meme qu'on a posté sur vous après le match de samedi ? 💀</div>
+                        <span class="msg-time">09:14</span>
+                    </div>
+                </div>
+                <div class="message-row out">
+                    <img src="../asset/image/Misha-logo.jpeg" alt="" class="msg-avatar">
+                    <div class="msg-bubble-wrap">
+                        <span class="msg-sender">Misha</span>
+                        <div class="msg-bubble">HAHAHA oui j'ai vu 😭 le montage avec la musique dramatique quand on a raté le service... c'est trop cruel</div>
+                        <span class="msg-time">09:28</span>
+                    </div>
+                </div>
+                <div class="message-row in">
+                    <img src="../asset/image/VMK_logo.jpg" alt="" class="msg-avatar">
+                    <div class="msg-bubble-wrap">
+                        <span class="msg-sender">Volley Meme King</span>
+                        <div class="msg-bubble">Prends-le comme un honneur, on fait que des memes sur les meilleurs clubs 😂🏆</div>
+                        <span class="msg-time">09:35</span>
+                    </div>
+                </div>
+                <div class="message-row in">
+                    <img src="../asset/image/VMK_logo.jpg" alt="" class="msg-avatar">
+                    <div class="msg-bubble-wrap">
+                        <div class="msg-bubble">Blague à part, votre niveau a vraiment explosé cette saison. Respect sincère 🤝</div>
+                        <span class="msg-time">09:36</span>
+                    </div>
+                </div>
+                <div class="message-row out">
+                    <img src="../asset/image/Misha-logo.jpeg" alt="" class="msg-avatar">
+                    <div class="msg-bubble-wrap">
+                        <div class="msg-bubble">Merci ! D'ailleurs vous êtes pas mal non plus... je vous ai vus jouer à Liège, votre attaque en rapide c'est vraiment impressionnant 👀</div>
+                        <span class="msg-time">09:44</span>
+                    </div>
+                </div>
+                <div class="message-row out">
+                    <img src="../asset/image/Misha-logo.jpeg" alt="" class="msg-avatar">
+                    <div class="msg-bubble-wrap">
+                        <div class="msg-bubble">Ça vous dirait un échange sérieux ? Meme energy + vrai volley 😄</div>
+                        <span class="msg-time">09:45</span>
+                    </div>
+                </div>
+                <div class="message-row in">
+                    <img src="../asset/image/VMK_logo.jpg" alt="" class="msg-avatar">
+                    <div class="msg-bubble-wrap">
+                        <span class="msg-sender">Volley Meme King</span>
+                        <div class="msg-bubble">Un LRE avec les rois du meme ? Historique 👑 On est partants !</div>
+                        <span class="msg-time">09:52</span>
+                    </div>
+                </div>
+                <div class="message-row out">
+                    <img src="../asset/image/Misha-logo.jpeg" alt="" class="msg-avatar">
+                    <div class="msg-bubble-wrap">
+                        <div class="msg-bubble special">
+                            Voilà la proposition officielle 👇
+                            <div class="lre-card">
+                                <h4>📋 Proposition LRE — KOYA × Volley Meme King</h4>
+                                <p>On vous apporte notre maîtrise du service flottant et de la lecture de jeu. Vous nous transmettez votre attaque rapide en centre et vos combinaisons 6-2.</p>
+                                <div class="lre-tags">
+                                    <span class="lre-tag">Attaque rapide</span>
+                                    <span class="lre-tag">6-2</span>
+                                    <span class="lre-tag">Service</span>
+                                    <span class="lre-tag">Lecture de jeu</span>
+                                </div>
+                            </div>
+                            <a href="lre.html" class="lre-btn">Voir la demande complète →</a>
+                        </div>
+                        <span class="msg-time">09:58</span>
+                    </div>
+                </div>
+                <div class="message-row in">
+                    <img src="../asset/image/VMK_logo.jpg" alt="" class="msg-avatar">
+                    <div class="msg-bubble-wrap">
+                        <span class="msg-sender">Volley Meme King</span>
+                        <div class="msg-bubble">Le meme est trop bon 😂 et le LRE aussi ! On valide ça cette semaine 🔥</div>
+                        <span class="msg-time">10:04</span>
+                    </div>
+                </div>
+            </div>
             <div class="chat-input-area">
                 <input type="text" class="chat-input" placeholder="Écrire un message...">
                 <button class="send-btn">
@@ -158,5 +367,19 @@
         </div>
 
     </div>
+
+    <script>
+        function showConv(id) {
+            document.querySelectorAll('.chat-window').forEach(w => w.style.display = 'none');
+            document.querySelectorAll('.conv-item').forEach(t => t.classList.remove('active'));
+            document.getElementById('conv-' + id).style.display = 'flex';
+            document.getElementById('tab-' + id).classList.add('active');
+        }
+    </script>
+
+
+    <footer>
+        <p>&copy; 2026 Koya. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
