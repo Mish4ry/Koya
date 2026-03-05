@@ -205,3 +205,16 @@
         display: none;
     }
 }
+
+.suivi {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 13px;
+    font-weight: 500;
+    transition: background 0.2s;
+}

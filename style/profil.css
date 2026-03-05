@@ -25,6 +25,20 @@ section {
     border-radius: 35px;
 }
 
+.surimg h3 {
+    font-family: Noto;
+    font-weight: 400;
+    font-size: 24px;
+    margin-top: 12px;
+}
+
+.surimg h4 {
+    font-family: Noto;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 12px;
+}
+
 .essential {
     position: absolute;
     width: 686px;
@@ -113,6 +127,8 @@ select { background: none; border: none; }
 }
 
 .LREbutton {
+    margin-left: 20px;
+    margin-top: 5px;
     background-color: var(--color-tag-text);
     color: var(--color-white);
     border-radius: 30px;
