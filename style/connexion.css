@@ -10,10 +10,23 @@ body {
     background-repeat: no-repeat;
 }
 
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+}
+
 hr {
     margin: 10px;
     width: 50%;
 }
+
 nav {
     display: flex;
     justify-content: center;
@@ -39,6 +52,7 @@ nav a:hover{
     color: #2D3748;
     font-size: 16px;
 }
+
 .google p {
     margin: 10px;
 }
@@ -55,6 +69,7 @@ nav a:hover{
     color: #2D3748;
     font-size: 16px;
 }
+
 .facebook p {
     margin: 10px;
 }
