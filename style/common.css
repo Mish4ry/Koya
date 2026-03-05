@@ -68,71 +68,106 @@ footer p {
 .left-sidebar {
     position: fixed;
     left: 0;
-    width: 200px;
+    width: 220px;
     height: 100vh;
-    border-right: 1px solid var(--color-border);
-    padding: 20px;
+    padding: 24px 16px;
     background-color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
 }
 
 .left-sidebar .logo {
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: var(--color-white);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 36px;
+    text-decoration: none;
 }
 
 .left-sidebar .logo img {
-    width: 100px;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--color-border);
 }
 
 nav {
-    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 nav a {
     display: flex;
     align-items: center;
-    margin: 12px 0;
-    padding: 15px 10px;
-    gap: 15px;
+    gap: 14px;
+    padding: 12px 14px;
     border-radius: 10px;
-    transition: 0.5s ease;
+    color: var(--color-text-faint);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.18s, color 0.18s;
+}
+
+nav a svg {
+    flex-shrink: 0;
+    opacity: 0.6;
+    transition: opacity 0.18s;
 }
 
 nav a img {
-    width: 25px;
-    height: 25px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     object-fit: cover;
-    transition: 0.5s ease;
+    flex-shrink: 0;
+    border: 2px solid rgba(255,255,255,0.15);
 }
 
 nav a span {
     color: var(--color-text-faint);
-    transition: 0.5s ease;
+    transition: color 0.18s;
 }
 
 nav a:hover {
     background-color: rgba(255, 255, 255, 0.08);
+    color: var(--color-white);
 }
 
 nav a:hover span {
     color: var(--color-white);
 }
 
-nav a:hover img {
-    filter: invert(1) brightness(2);
+nav a:hover svg {
+    opacity: 1;
+}
+
+nav a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+}
+
+nav a.active span {
+    color: var(--color-white);
+}
+
+nav a.active svg {
+    opacity: 1;
 }
 
 nav a.profil-pic:hover img {
     filter: none;
 }
 
-nav .active {
-    font-weight: 600;
-}
-
 .main-content {
-    margin-left: 200px;
+    margin-left: 220px;
     padding: 40px 60px;
     min-height: 100vh;
 }
