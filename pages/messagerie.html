@@ -43,42 +43,46 @@
 
     <div class="chat-layout">
 
+        <input type="radio" name="conv" id="radio-psc" class="conv-radio">
+        <input type="radio" name="conv" id="radio-bvv" class="conv-radio" checked>
+        <input type="radio" name="conv" id="radio-vmk" class="conv-radio">
+
         <!-- Liste des conversations -->
         <div class="conversations-list">
             <div class="conv-header">
                 <h2>Messages</h2>
             </div>
 
-            <div class="conv-item" onclick="showConv('psc')" id="tab-psc">
+            <label class="conv-item" for="radio-psc" id="tab-psc">
                 <img src="../asset/image/PSC.png" alt="Pink Spikers" class="conv-avatar">
                 <div class="conv-info">
                     <div class="conv-name">Pink Spikers Club</div>
                     <div class="conv-preview">On serait ravis ! On vous...</div>
                 </div>
                 <span class="conv-time">14:32</span>
-            </div>
+            </label>
 
-            <div class="conv-item active" onclick="showConv('bvv')" id="tab-bvv">
+            <label class="conv-item" for="radio-bvv" id="tab-bvv">
                 <img src="../asset/image/BVV.png" alt="Beach Volley Vibes" class="conv-avatar">
                 <div class="conv-info">
                     <div class="conv-name">Beach Volley Vibes</div>
                     <div class="conv-preview">On est chauds pour le beach 🏖️</div>
                 </div>
                 <span class="conv-time">hier</span>
-            </div>
+            </label>
 
-            <div class="conv-item" onclick="showConv('vmk')" id="tab-vmk">
+            <label class="conv-item" for="radio-vmk" id="tab-vmk">
                 <img src="../asset/image/VMK_logo.jpg" alt="Volley Meme King" class="conv-avatar">
                 <div class="conv-info">
                     <div class="conv-name">Volley Meme King</div>
                     <div class="conv-preview">Le meme est trop bon 😂</div>
                 </div>
                 <span class="conv-time">lun.</span>
-            </div>
+            </label>
         </div>
 
         <!-- Conversation PSC -->
-        <div class="chat-window" id="conv-psc" style="display:none;">
+        <div class="chat-window" id="conv-psc">
             <div class="chat-header">
                 <img src="../asset/image/PSC.png" alt="Pink Spikers Club">
                 <div class="chat-header-info">
@@ -169,7 +173,7 @@
         </div>
 
         <!-- Conversation BVV -->
-        <div class="chat-window" id="conv-bvv" style="display:flex;">
+        <div class="chat-window" id="conv-bvv">
             <div class="chat-header">
                 <img src="../asset/image/BVV.png" alt="Beach Volley Vibes">
                 <div class="chat-header-info">
@@ -261,7 +265,7 @@
         </div>
 
         <!-- Conversation VMK -->
-        <div class="chat-window" id="conv-vmk" style="display:none;">
+        <div class="chat-window" id="conv-vmk">
             <div class="chat-header">
                 <img src="../asset/image/VMK_logo.jpg" alt="Volley Meme King">
                 <div class="chat-header-info">
@@ -368,15 +372,6 @@
         </div>
 
     </div>
-
-    <script>
-        function showConv(id) {
-            document.querySelectorAll('.chat-window').forEach(w => w.style.display = 'none');
-            document.querySelectorAll('.conv-item').forEach(t => t.classList.remove('active'));
-            document.getElementById('conv-' + id).style.display = 'flex';
-            document.getElementById('tab-' + id).classList.add('active');
-        }
-    </script>
 
 
     <footer>

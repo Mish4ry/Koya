@@ -317,6 +317,26 @@ body { display: flex; }
     color: var(--color-white);
 }
 
+.conv-radio {
+    display: none;
+}
+
+.chat-window {
+    display: none;
+}
+
+#radio-psc:checked ~ #conv-psc,
+#radio-bvv:checked ~ #conv-bvv,
+#radio-vmk:checked ~ #conv-vmk {
+    display: flex;
+}
+
+#radio-psc:checked ~ .conversations-list #tab-psc,
+#radio-bvv:checked ~ .conversations-list #tab-bvv,
+#radio-vmk:checked ~ .conversations-list #tab-vmk {
+    background: var(--color-tag-bg);
+}
+
 @media (max-width: 768px) {
     .chat-layout { margin-left: 0; width: 100%; }
     .conversations-list { display: none; }

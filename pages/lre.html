@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LRE — Rochefort × Pink Spikers — KOYA</title>
-    <link rel="stylesheet" href="../style/lre.css">
+    <title>Locker Room Exchange — KOYA</title>
+    <link rel="stylesheet" href="../style/lre-menu.css">
     <link rel="stylesheet" href="../style/common.css">
     <link rel="shortcut icon" href="../asset/image/Koya-icon.png">
 </head>
@@ -41,150 +41,297 @@
         </nav>
     </aside>
 
+    
     <main class="main-content">
 
-        <a href="messagerie.html" class="back-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8l8 8l1.41-1.41L7.83 13H20v-2z"/></svg>
-            Retour aux messages
-        </a>
+        
+        <div class="page-header">
+            <h1><span class="lre-icon">🔄</span> Locker Room Exchange</h1>
+            <p>Gérez vos échanges de compétences avec d'autres clubs</p>
+        </div>
 
-        <div class="lre-header">
-            <div class="lre-clubs">
-                <div class="club-card">
+        
+        <div class="stats-bar">
+            <div class="stat-card highlight">
+                <span class="stat-value">56</span>
+                <span class="stat-label">Points de Troc</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value">3</span>
+                <span class="stat-label">Échanges actifs</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value">7</span>
+                <span class="stat-label">Échanges complétés</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value">2</span>
+                <span class="stat-label">En attente</span>
+            </div>
+        </div>
+
+        
+        <div class="cta-block">
+            <div class="cta-block-text">
+                <h3>Proposer un nouvel échange</h3>
+                <p>Partagez vos compétences et comblez vos lacunes avec un autre club.</p>
+            </div>
+            <a href="lre.html" class="btn-cta">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"/></svg>
+                Nouveau LRE
+            </a>
+        </div>
+
+        
+        <input type="radio" name="lre-tab" id="tab-all" class="lre-tab-radio" checked>
+        <input type="radio" name="lre-tab" id="tab-pending" class="lre-tab-radio">
+        <input type="radio" name="lre-tab" id="tab-active" class="lre-tab-radio">
+        <input type="radio" name="lre-tab" id="tab-done" class="lre-tab-radio">
+
+        <div class="tabs">
+            <label class="tab" for="tab-all">Tous</label>
+            <label class="tab" for="tab-pending">En attente</label>
+            <label class="tab" for="tab-active">Actifs</label>
+            <label class="tab" for="tab-done">Terminés</label>
+        </div>
+
+        
+        <div class="section-header">
+            <h2>Mes échanges</h2>
+        </div>
+
+        <div class="lre-list" id="lre-list">
+
+            
+            <a href="lre.html" class="lre-card" data-status="pending">
+                <div class="lre-card-avatars">
                     <img src="../asset/image/Misha-logo.jpeg" alt="Misha">
-                    <div>
-                        <div class="club-card-name">Misha — Rochefort</div>
-                        <div class="club-card-loc">📍 Rochefort, Belgique</div>
-                    </div>
-                </div>
-                <div class="exchange-arrow">⇄</div>
-                <div class="club-card">
                     <img src="../asset/image/PSC.png" alt="Pink Spikers">
-                    <div>
-                        <div class="club-card-name">Pink Spikers Club</div>
-                        <div class="club-card-loc">📍 Dôme des Sakura, Belgique</div>
+                </div>
+                <div class="lre-card-body">
+                    <div class="lre-card-title">Rochefort × Pink Spikers Club</div>
+                    <div class="lre-card-meta">
+                        <span>Initié par Misha</span>
+                        <span>·</span>
+                        <span>il y a 2 heures</span>
+                    </div>
+                    <div class="lre-card-tags">
+                        <span class="tag tag-skill">Service flottant</span>
+                        <span class="tag tag-skill">Attaque</span>
+                        <span class="tag tag-skill">Passe</span>
+                        <span class="tag tag-skill">Zone 6</span>
                     </div>
                 </div>
-            </div>
+                <span class="badge badge-pending">
+                    <span class="badge-dot"></span>
+                    En attente
+                </span>
+            </a>
 
-            <div class="lre-title">Locker Room Exchange</div>
-            <div class="lre-subtitle">Initié par Misha · Rochefort · il y a 2 heures</div>
-            <span class="status-badge">
-                <span class="status-dot"></span>
-                En attente de confirmation
-            </span>
-        </div>
+            
+            <a href="lre.html" class="lre-card" data-status="pending">
+                <div class="lre-card-avatars">
+                    <img src="../asset/image/Misha-logo.jpeg" alt="Misha">
+                    <img src="../asset/image/BVV.png" alt="Beach Volley Vibes">
+                </div>
+                <div class="lre-card-body">
+                    <div class="lre-card-title">Rochefort × Beach Volley Vibes</div>
+                    <div class="lre-card-meta">
+                        <span>Initié par Beach Volley Vibes</span>
+                        <span>·</span>
+                        <span>hier</span>
+                    </div>
+                    <div class="lre-card-tags">
+                        <span class="tag tag-skill">Réception</span>
+                        <span class="tag tag-skill">Défense basse</span>
+                        <span class="tag tag-skill">Blocage</span>
+                    </div>
+                </div>
+                <span class="badge badge-pending">
+                    <span class="badge-dot"></span>
+                    En attente
+                </span>
+            </a>
 
-        <div class="lre-grid">
-            <div class="lre-block">
-                <div class="lre-block-title">Ce que Misha offre</div>
-                <div class="skill-row">
-                    <div class="skill-icon">🏐</div>
-                    <div class="skill-info">
-                        <div class="skill-name">Service flottant</div>
-                        <div class="skill-desc">2 séances d'entraînement intensif</div>
-                    </div>
-                    <span class="skill-level">Expert</span>
+            
+            <a href="lre.html" class="lre-card" data-status="active">
+                <div class="lre-card-avatars">
+                    <img src="../asset/image/Misha-logo.jpeg" alt="Misha">
+                    <img src="../asset/image/VMK_logo.jpg" alt="Volley Meme King">
                 </div>
-                <div class="skill-row">
-                    <div class="skill-icon">⚡</div>
-                    <div class="skill-info">
-                        <div class="skill-name">Attaque en contre</div>
-                        <div class="skill-desc">Techniques de timing et placement</div>
+                <div class="lre-card-body">
+                    <div class="lre-card-title">Rochefort × Volley Meme King</div>
+                    <div class="lre-card-meta">
+                        <span>Initié par Misha</span>
+                        <span>·</span>
+                        <span>lundi dernier</span>
                     </div>
-                    <span class="skill-level">Avancé</span>
-                </div>
-                <div class="skill-row">
-                    <div class="skill-icon">🎯</div>
-                    <div class="skill-info">
-                        <div class="skill-name">Lecture du jeu adverse</div>
-                        <div class="skill-desc">Analyse tactique en temps réel</div>
+                    <div class="lre-card-tags">
+                        <span class="tag tag-skill">Service</span>
+                        <span class="tag tag-skill">Smash</span>
+                        <span class="tag tag-skill">Passe haute</span>
                     </div>
-                    <span class="skill-level">Expert</span>
                 </div>
-            </div>
+                <span class="badge badge-active">
+                    <span class="badge-dot"></span>
+                    En cours
+                </span>
+            </a>
 
-            <div class="lre-block">
-                <div class="lre-block-title">Ce que Misha recherche</div>
-                <div class="skill-row">
-                    <div class="skill-icon">🙌</div>
-                    <div class="skill-info">
-                        <div class="skill-name">Passe en main</div>
-                        <div class="skill-desc">Précision et régularité en match</div>
-                    </div>
-                    <span class="skill-level" style="background:#fdf0ea;color:#8c3a1a;border-color:#f0bfa3;">Recherché</span>
+            
+            <a href="lre.html" class="lre-card" data-status="active">
+                <div class="lre-card-avatars">
+                    <img src="../asset/image/PSC.png" alt="Pink Spikers">
+                    <img src="../asset/image/BVV.png" alt="BVV">
                 </div>
-                <div class="skill-row">
-                    <div class="skill-icon">🛡️</div>
-                    <div class="skill-info">
-                        <div class="skill-name">Réception zone 6</div>
-                        <div class="skill-desc">Défense basse et relance propre</div>
+                <div class="lre-card-body">
+                    <div class="lre-card-title">Pink Spikers Club × Beach Volley Vibes</div>
+                    <div class="lre-card-meta">
+                        <span>Observateur</span>
+                        <span>·</span>
+                        <span>il y a 3 jours</span>
                     </div>
-                    <span class="skill-level" style="background:#fdf0ea;color:#8c3a1a;border-color:#f0bfa3;">Recherché</span>
-                </div>
-                <div class="skill-row">
-                    <div class="skill-icon">📐</div>
-                    <div class="skill-info">
-                        <div class="skill-name">Organisation système 5-1</div>
-                        <div class="skill-desc">Transitions et rotations fluides</div>
+                    <div class="lre-card-tags">
+                        <span class="tag tag-skill">Système 5-1</span>
+                        <span class="tag tag-skill">Rotations</span>
                     </div>
-                    <span class="skill-level" style="background:#fdf0ea;color:#8c3a1a;border-color:#f0bfa3;">Recherché</span>
                 </div>
-            </div>
-        </div>
+                <span class="badge badge-active">
+                    <span class="badge-dot"></span>
+                    En cours
+                </span>
+            </a>
 
-        <div class="lre-timeline">
-            <div class="timeline-title">Déroulement de l'échange</div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot done">✓</div>
-                    <div class="timeline-content">
-                        <h4>Demande envoyée</h4>
-                        <p>Misha a initié la demande LRE · Aujourd'hui 14:21</p>
+            
+            <a href="lre.html" class="lre-card" data-status="active">
+                <div class="lre-card-avatars">
+                    <img src="../asset/image/Misha-logo.jpeg" alt="Misha">
+                    <img src="../asset/image/PSC.png" alt="PSC">
+                </div>
+                <div class="lre-card-body">
+                    <div class="lre-card-title">Rochefort × Pink Spikers — Séance #2</div>
+                    <div class="lre-card-meta">
+                        <span>Initié par Pink Spikers</span>
+                        <span>·</span>
+                        <span>il y a 5 jours</span>
+                    </div>
+                    <div class="lre-card-tags">
+                        <span class="tag tag-skill">Contre-attaque</span>
+                        <span class="tag tag-skill">Lecture du jeu</span>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot pending">⏳</div>
-                    <div class="timeline-content">
-                        <h4>Confirmation de Pink Spikers Club</h4>
-                        <p>En attente de leur réponse officielle</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot todo">📅</div>
-                    <div class="timeline-content">
-                        <h4>Planification des séances</h4>
-                        <p>À définir ensemble après confirmation</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot todo">🏐</div>
-                    <div class="timeline-content">
-                        <h4>Échange de compétences</h4>
-                        <p>Sessions en présence des deux clubs</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot todo">⭐</div>
-                    <div class="timeline-content">
-                        <h4>Évaluation et clôture</h4>
-                        <p>Points de troc attribués aux deux clubs</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+                <span class="badge badge-active">
+                    <span class="badge-dot"></span>
+                    En cours
+                </span>
+            </a>
 
-        <div class="lre-actions">
-            <button class="btn-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z"/></svg>
-                Confirmer l'échange
-            </button>
-            <button class="btn-secondary">Proposer une modification</button>
-            <button class="btn-secondary" style="color:#c62828;border-color:#ef9a9a;">Refuser</button>
+            
+            <a href="lre.html" class="lre-card" data-status="done">
+                <div class="lre-card-avatars">
+                    <img src="../asset/image/Misha-logo.jpeg" alt="Misha">
+                    <img src="../asset/image/VMK_logo.jpg" alt="VMK">
+                </div>
+                <div class="lre-card-body">
+                    <div class="lre-card-title">Rochefort × Volley Meme King — Séance #1</div>
+                    <div class="lre-card-meta">
+                        <span>Initié par Misha</span>
+                        <span>·</span>
+                        <span>il y a 2 semaines</span>
+                    </div>
+                    <div class="lre-card-tags">
+                        <span class="tag tag-skill">Service flottant</span>
+                        <span class="tag tag-skill">Attaque</span>
+                    </div>
+                </div>
+                <span class="badge badge-done">
+                    <span class="badge-dot"></span>
+                    Terminé
+                </span>
+            </a>
+
+            
+            <a href="lre.html" class="lre-card" data-status="done">
+                <div class="lre-card-avatars">
+                    <img src="../asset/image/BVV.png" alt="BVV">
+                    <img src="../asset/image/VMK_logo.jpg" alt="VMK">
+                </div>
+                <div class="lre-card-body">
+                    <div class="lre-card-title">Beach Volley Vibes × Volley Meme King</div>
+                    <div class="lre-card-meta">
+                        <span>Observateur</span>
+                        <span>·</span>
+                        <span>il y a 3 semaines</span>
+                    </div>
+                    <div class="lre-card-tags">
+                        <span class="tag tag-skill">Réception</span>
+                        <span class="tag tag-skill">Blocage</span>
+                    </div>
+                </div>
+                <span class="badge badge-done">
+                    <span class="badge-dot"></span>
+                    Terminé
+                </span>
+            </a>
+
+            
+            <a href="lre.html" class="lre-card" data-status="done">
+                <div class="lre-card-avatars">
+                    <img src="../asset/image/PSC.png" alt="PSC">
+                    <img src="../asset/image/BVV.png" alt="BVV">
+                </div>
+                <div class="lre-card-body">
+                    <div class="lre-card-title">Pink Spikers × Beach Volley Vibes — Séance #1</div>
+                    <div class="lre-card-meta">
+                        <span>Initié par PSC</span>
+                        <span>·</span>
+                        <span>il y a 1 mois</span>
+                    </div>
+                    <div class="lre-card-tags">
+                        <span class="tag tag-skill">Passe en main</span>
+                        <span class="tag tag-skill">Défense</span>
+                    </div>
+                </div>
+                <span class="badge badge-done">
+                    <span class="badge-dot"></span>
+                    Terminé
+                </span>
+            </a>
+
         </div>
 
     </main>
 
+    
+    <div id="amis-popup" class="popup">
+        <div class="popup-content">
+            <a href="#" class="popup-close">✕</a>
+            <h2>Mes Amis</h2>
+            <div class="amis-list">
+                <div class="ami-item">
+                    <div class="ami-info">
+                        <p class="ami-name">Pink-Spikers-Club</p>
+                        <p class="ami-role">Équipe • Dôme Sakura</p>
+                    </div>
+                    <button class="btn-message">Message</button>
+                </div>
+                <div class="ami-item">
+                    <div class="ami-info">
+                        <p class="ami-name">Beach-Volley-Vibes</p>
+                        <p class="ami-role">Équipe • Rochefort</p>
+                    </div>
+                    <button class="btn-message">Message</button>
+                </div>
+                <div class="ami-item">
+                    <div class="ami-info">
+                        <p class="ami-name">Volley-Meme-King</p>
+                        <p class="ami-role">Club • Belgique</p>
+                    </div>
+                    <button class="btn-message">Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2026 Koya. Tous droits réservés.</p>
