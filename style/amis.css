@@ -1,0 +1,207 @@
+.search-bar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 10px 16px;
+    max-width: 500px;
+    margin-bottom: 24px;
+    color: var(--color-text-muted);
+}
+
+.search-bar {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: var(--color-text-primary);
+    background: transparent;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+}
+
+.search-bar::placeholder {
+    color: var(--color-text-faint);
+}
+
+.demande-item {
+    margin-bottom: 10px;
+}
+
+.demande-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.btn-accept {
+    background: var(--color-dark);
+    color: var(--color-white);
+    border: none;
+    border-radius: 8px;
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    font-family: "Montserrat", sans-serif;
+}
+
+.btn-accept:hover {
+    opacity: 0.85;
+}
+
+.btn-refuser {
+    background: transparent;
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: "Montserrat", sans-serif;
+}
+
+.btn-refuser:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+.ami-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.btn-message-small {
+    background: var(--color-dark);
+    color: var(--color-white);
+    border: none;
+    border-radius: 8px;
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    font-family: "Montserrat", sans-serif;
+}
+
+.btn-message-small:hover {
+    opacity: 0.85;
+}
+
+.btn-voir-profil {
+    background: transparent;
+    color: var(--color-tag-text);
+    border: 1px solid var(--color-tag-border);
+    border-radius: 8px;
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: "Montserrat", sans-serif;
+}
+
+.btn-voir-profil:hover {
+    background: var(--color-tag-bg);
+}
+
+.btn-supprimer {
+    background: transparent;
+    color: #cc4444;
+    border: 1px solid #f0c0c0;
+    border-radius: 8px;
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: "Montserrat", sans-serif;
+}
+
+.btn-supprimer:hover {
+    background: #fff0f0;
+}
+
+.count-badge {
+    background: var(--color-tag-bg);
+    color: var(--color-tag-text);
+    border: 1px solid var(--color-tag-border);
+    border-radius: 20px;
+    padding: 2px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+/* Popup profil ami */
+.profil-ami-content {
+    max-width: 520px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.profil-ami-banniere {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    display: block;
+}
+
+.profil-ami-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 24px 12px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.profil-ami-pp {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-white);
+    margin-top: -30px;
+    flex-shrink: 0;
+    background: var(--color-white);
+}
+
+.profil-ami-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 2px;
+}
+
+.profil-ami-sub {
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.profil-ami-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 24px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-val {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.stat-lbl {
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
