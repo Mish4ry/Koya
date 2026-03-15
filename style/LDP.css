@@ -83,6 +83,7 @@ nav img {
 
 .koya-txt {
     padding-left: 19px;
+    margin-right: 20px;
     padding-right: 0;
     display: flex;
     width: 700px;
@@ -118,6 +119,7 @@ nav img {
 .fonction-txt {
     display: flex;
     flex-wrap: wrap;
+    margin-left: 20px;
     text-align: start;
     padding-left: 19px;
     padding-right: 0;
